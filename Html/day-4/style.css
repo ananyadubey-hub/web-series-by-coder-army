@@ -1,0 +1,11 @@
+
+.box{
+  background-color: pink;
+  position: relative;
+  left:30px;
+  right:100px;
+  top:40px;
+  border-radius:10px;
+
+ 
+}

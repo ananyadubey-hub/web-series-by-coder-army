@@ -1,0 +1,65 @@
+/*tag slector
+
+h1{
+  background-color: brown;
+  color: black;
+}
+h1{
+  background-color: aqua;
+  color: blueviolet;
+
+}
+p{
+  background-color: magenta;
+  color: black;
+}
+ul{
+  background-color: lightgreen;
+  color: darkblue;
+}
+li{
+  background-color: lightcoral;
+  color: white;
+}
+/*id selector*/
+#first{
+  background-color: yellow;
+  color: red;
+}
+.third{
+  background-color: lightblue;
+  color: darkblue;    
+}
+h1,.third,.five{
+  background-color: aqua;
+  border: 1px double black;
+  padding: 10px; 
+  margin: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3{
+  background:black;
+  color:azure
+}
+ul{
+  background-color: lightgreen;
+  color: darkblue;
+}
+/* font size */
+h1{
+  font-size:40px;
+}
+/* em ka mtlv hota h ki apne parent ke size ke se 1 guna bada */
+li{
+font-size:1em;
+}
+/* vw ka matv  sbse chhota */
+h3{
+  font-size:2vw;
+}
+/* vh view hight */
+/* %
+ */
+ /* font-size= text ke size badhane ke liy use  */
+ /* font weight = text ke weight means bold type ka krne ke liy */
+ /* font-style=italic bold underline */

@@ -1,0 +1,170 @@
+/* ===== Navbar common styling ===== */
+nav {
+  background-color: #bcc3c3;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* ===== General Body Styling ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Container Styling ===== */
+.container {
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 450px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* ===== Home Page ===== */
+body.home {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+body.home .container {
+  background-color: rgba(255,255,255,0.9);
+}
+
+body.home footer {
+  background-color: #a6c1ee;
+  color: #fff;
+}
+
+/* ===== About Page ===== */
+body.about {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: #fff;
+}
+
+body.about .container {
+  background-color: rgba(255,255,255,0.95);
+  color: #185a9d;
+}
+
+body.about footer {
+  background-color: #185a9d;
+  color: #fff;
+}
+
+/* ===== Course Page ===== */
+body.course {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+body.course .container {
+  background-color: rgba(255,255,255,0.95);
+}
+
+body.course input,
+body.course select,
+body.course button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body.course button {
+  background-color: #ff7e5f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.course button:hover {
+  background-color: #feb47b;
+}
+
+body.course footer {
+  background-color: #ff7e5f;
+  color: #fff;
+}
+
+/* ===== Contact Page ===== */
+body.contact {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+body.contact .container {
+  background-color: rgba(255,255,255,0.95);
+  color: #333;
+}
+
+body.contact input,
+body.contact textarea,
+body.contact button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body.contact button {
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.contact button:hover {
+  background-color: #6a11cb;
+}
+
+body.contact footer {
+  background-color: #2575fc;
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;  /* links screen ke edges tak spread */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

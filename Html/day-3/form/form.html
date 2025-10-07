@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #007bff;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form id="myForm">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <div class="error" id="nameError"></div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number">
+        <div class="error" id="phoneError"></div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <div class="error" id="passwordError"></div>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender-group">
+          <label class="form-check"><input type="radio" name="gender" value="Male"> Male</label>
+          <label class="form-check"><input type="radio" name="gender" value="Female"> Female</label>
+          <label class="form-check"><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <div class="error" id="genderError"></div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" id="dob">
+        <div class="error" id="dobError"></div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label>Address</label>
+        <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+        <div class="error" id="addressError"></div>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-group">
+        <label>Skills</label>
+        <select id="skills">
+          <option value="">--Select Skill--</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="React">React</option>
+          <option value="Node.js">Node.js</option>
+        </select>
+        <div class="error" id="skillsError"></div>
+      </div>
+
+      <!-- File Upload -->
+      <div class="form-group">
+        <label>Upload Resume</label>
+        <input type="file" id="resume">
+        <div class="error" id="resumeError"></div>
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div class="form-group form-check">
+        <input type="checkbox" id="terms">
+        <label for="terms">I agree to the terms & conditions</label>
+        <div class="error" id="termsError"></div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let isValid = true;
+
+      // Reset all errors
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+      // Name validation
+      const name = document.getElementById("name").value.trim();
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required";
+        isValid = false;
+      }
+
+      // Email validation
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        document.getElementById("emailError").textContent = "Enter a valid email";
+        isValid = false;
+      }
+
+      // Phone validation
+      const phone = document.getElementById("phone").value.trim();
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phone.match(phonePattern)) {
+        document.getElementById("phoneError").textContent = "Enter 10 digit phone number";
+        isValid = false;
+      }
+
+      // Password validation
+      const password = document.getElementById("password").value;
+      if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Password must be at least 6 characters";
+        isValid = false;
+      }
+
+      // Gender validation
+      const gender = document.querySelector('input[name="gender"]:checked');
+      if (!gender) {
+        document.getElementById("genderError").textContent = "Select gender";
+        isValid = false;
+      }
+
+      // DOB validation
+      const dob = document.getElementById("dob").value;
+      if (!dob) {
+        document.getElementById("dobError").textContent = "Select date of birth";
+        isValid = false;
+      }
+
+      // Address validation
+      const address = document.getElementById("address").value.trim();
+      if (address === "") {
+        document.getElementById("addressError").textContent = "Address is required";
+        isValid = false;
+      }
+
+      // Skills validation
+      const skills = document.getElementById("skills").value;
+      if (skills === "") {
+        document.getElementById("skillsError").textContent = "Select a skill";
+        isValid = false;
+      }
+
+      // Resume validation
+      const resume = document.getElementById("resume").files.length;
+      if (resume === 0) {
+        document.getElementById("resumeError").textContent = "Upload your resume";
+        isValid = false;
+      }
+
+      // Terms validation
+      const terms = document.getElementById("terms").checked;
+      if (!terms) {
+        document.getElementById("termsError").textContent = "You must agree to continue";
+        isValid = false;
+      }
+
+      // Final check
+      if (isValid) {
+        alert("Form submitted successfully!");
+        document.getElementById("myForm").reset();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+#containerr{
+  height: 400px;
+  width:500px;
+  background-color:rgb(80, 83, 86);
+  border-radius: 15px;
+}
+#circle{
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: aqua;
+  position: fixed;
+top:50px;
+bottom:50px;
+right:50px;
+left: 20px;
+}
+
+#circle1{
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: aqua;
+  position: fixed;
+top:50px;
+bottom:50px;
+right:50px;
+left: 20px;
+}
+#circle2{
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: aqua;
+  position: fixed;
+top:50px;
+bottom:50px;
+right:50px;
+left: 20px;
+}
+#circle3{
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: rgb(33, 119, 119);
+  position: fixed;
+top:50px;
+bottom:50px;
+right:50px;
+left: 20px;
+}

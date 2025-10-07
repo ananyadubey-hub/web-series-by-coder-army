@@ -1,0 +1,40 @@
+/*span{
+  background-color: #ffff00;
+  color: red;
+  border-color:black;
+  border-width:2px; 
+  border-style:solid;
+ box-shadow:50px;
+}*/
+h1{
+  background-color: aqua;
+    border-color:black;
+      border-width:2px; 
+      border-style:solid;
+      margin:50px;
+      padding: 80px;
+      
+      text-align: center;
+      box-shadow: 10px 10px 5px grey;
+      border-radius: 20px;  
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 40px;    
+      font-weight: bold;
+      text-decoration: underline;   
+      text-transform: capitalize;
+      letter-spacing: 5px;
+      word-spacing: 10px;
+      line-height: 1.5;
+      text-shadow: 2px 2px 5px red;
+      /* border:10px solid aqua; */ 
+
+
+}
+p{
+  background-color: lightgreen;
+    border-color:black;
+      border-width:2px; 
+      border-style:solid;
+      padding:20px;
+      margin:50px;
+}

@@ -1,0 +1,74 @@
+h1{
+  background-color:  aqua;
+  position: relative;
+  top:20px;
+  left:50px;
+}
+h3{
+  background-color: rgb(226, 43, 134);
+  position: fixed;
+  top:10px;
+  left:50px;
+
+}
+.box{
+  background-color: pink;
+  position:sticky;
+  top:20px;
+}
+/* types of position
+static // by defult 
+relative
+fixed
+sticky
+absolute// left,right,top,buttom
+*/
+
+nav{
+  background-color:rgb(233, 154, 154);
+  color:black;
+  gap:30px;
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:50px;
+  width:1500px;
+
+  
+ 
+
+}
+img{
+  height: 500px;
+  width:1300;
+  position:fixed;
+  top:50px;
+  left:0px;
+
+}
+h1{
+  position: absolute;
+  top:10px;
+  z-index: 20;
+
+}
+
+/*project css*/
+#container{
+  height: 200px;
+  width:300px;
+  background-color:rgb(9, 70, 154);
+  
+}
+#circle{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: aqua;
+  position: fixed;
+top:50px;
+bottom:50px;
+right: 50px;
+left: 88px;
+}
+

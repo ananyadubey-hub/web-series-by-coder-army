@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Page</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="course">
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="course.html">Course</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Course Container -->
+  <div class="container">
+    <h1>Enroll in a Course</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <select required>
+        <option value="" disabled selected>Select Course</option>
+        <option value="web">Web Development</option>
+        <option value="mern">MERN Stack</option>
+        <option value="data">Data Science</option>
+        <option value="uiux">UI/UX Design</option>
+      </select>
+      <button type="submit">Enroll Now</button>
+    </form>
+  </div>
+
+</body>
+</html>

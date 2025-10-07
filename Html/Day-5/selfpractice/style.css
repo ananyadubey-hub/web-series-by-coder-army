@@ -1,0 +1,166 @@
+/* ===== Navbar ===== */
+nav ul {
+  list-style-type: none;   /* bullets hatane ke liye */
+  display: flex;           /* horizontal line me karne ke liye */
+  gap: 20px;    
+  background-color: #bcc3c3;    
+  height: 50px;   
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+nav a {
+  text-decoration: none;   /* underline hatane ke liye */
+  color: black;            /* link ka color */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* ===== Common container ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* ===== Contact Page ===== */
+body.contact {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.contact h1 {
+  color: #2575fc;
+}
+
+body.contact input, 
+body.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+body.contact input:focus, 
+body.contact textarea:focus {
+  border-color: #2575fc;
+}
+
+body.contact button {
+  padding: 12px;
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.contact button:hover {
+  background: #6a11cb;
+}
+
+/* ===== Course Page ===== */
+body.course {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.course h1 {
+  color: #ff7e5f;
+}
+
+body.course input, 
+body.course select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+body.course input:focus, 
+body.course select:focus {
+  border-color: #ff7e5f;
+}
+
+body.course button {
+  padding: 12px;
+  background: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.course button:hover {
+  background: #feb47b;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== About Page ===== */
+body.about {
+  background: linear-gradient(to right, #2cdfa6, #185a9d);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+body.about .container {
+  width: 500px;
+}
+
+body.about h1 {
+  color: #185a9d;
+}
+
+body.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+body.about a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #185a9d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+body.about a:hover {
+  background: #43cea2;
+  color: #fff;
+}
