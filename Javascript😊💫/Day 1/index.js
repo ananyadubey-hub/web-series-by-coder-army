@@ -1,0 +1,1 @@
+console.log("strike is coming soon")

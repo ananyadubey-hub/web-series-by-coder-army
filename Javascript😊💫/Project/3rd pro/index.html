@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love  calculator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body style=" background-color:rgb(245, 107, 107); Arial, sans-serif; text-align: center; margin-top: 50px;">
+ 
+  <h1>Love Calculator</h1>
+  <p>Enter two names to see their love compatibility!</p>
+  <input type="text" id="name1" placeholder="First Name" style="padding: 10px; margin: 10px; width: 200px;">
+  <input type="text" id="name2" placeholder="Second Name" style="padding: 10px; margin: 10px; width: 200px;">
+  <br>
+  <button onclick="calculateLove()" style="padding: 10px 20px; font-size: 16px;">Calculate Love</button>
+  <h2 id="result" style="margin-top: 20px;"></h2>
+
+  <script>
+    function calculateLove() {
+      const name1 = document.getElementById('name1').value.trim();
+      const name2 = document.getElementById('name2').value.trim();
+
+      if (name1 === '' || name2 === '') {
+        alert('Please enter both names.');
+        return;
+      }
+
+      // Simple love calculation algorithm
+      const combinedNames = name1.toLowerCase() + name2.toLowerCase();
+      let score = 0;
+
+      for (let char of combinedNames) {
+        score += char.charCodeAt(0);
+      }
+
+      const lovePercentage = score % 101; // Get a percentage between 0 and 100
+
+      document.getElementById('result').innerText = `Love Compatibility: ${lovePercentage}%`;
+    }
+  </script>
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Love Calculator ❤️</h1>
+    <p>Enter two names to see their love compatibility!</p>
+    <input type="text" id="name1" placeholder="First Name">
+    <input type="text" id="name2" placeholder="Second Name">
+    <br>
+    <button onclick="calculateLove()">Calculate Love</button>
+    <h2 id="result"></h2>
+  </div>
+
+  <script>
+    function calculateLove() {
+      const name1 = document.getElementById('name1').value.trim();
+      const name2 = document.getElementById('name2').value.trim();
+
+      if (name1 === '' || name2 === '') {
+        alert('Please enter both names.');
+        return;
+      }
+
+      const combinedNames = name1.toLowerCase() + name2.toLowerCase();
+      let score = 0;
+
+      for (let char of combinedNames) {
+        score += char.charCodeAt(0);
+      }
+
+      const lovePercentage = score % 101;
+      document.getElementById('result').innerText = `Love Compatibility: ${lovePercentage}%`;
+    }
+  </script>
+</body>
+</html>
